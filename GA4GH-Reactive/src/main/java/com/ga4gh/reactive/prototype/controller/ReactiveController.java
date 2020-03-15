@@ -11,7 +11,7 @@ import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/ga4gh")
-public class FluxController {
+public class ReactiveController {
 
 	private GA4GHRepository GA4GHRepository;
 
