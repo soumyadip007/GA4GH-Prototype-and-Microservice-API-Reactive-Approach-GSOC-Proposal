@@ -14,7 +14,6 @@ import lombok.ToString;
 @Getter	
 @Setter	
 @ToString
-@NoArgsConstructor
 @AllArgsConstructor
 @Document
 public class GA4GH {
