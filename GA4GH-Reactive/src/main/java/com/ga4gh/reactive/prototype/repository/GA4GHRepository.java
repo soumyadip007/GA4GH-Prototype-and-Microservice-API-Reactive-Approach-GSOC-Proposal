@@ -1,4 +1,4 @@
-package com.ga4gh.reactive.prototype.mongo.repository;
+package com.ga4gh.reactive.prototype.repository;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
