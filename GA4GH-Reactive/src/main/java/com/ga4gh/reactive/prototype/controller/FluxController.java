@@ -13,26 +13,13 @@ import reactor.core.publisher.Flux;
 @RequestMapping("/ga4gh")
 public class FluxController {
 
+	private 
 
 	@GetMapping("/flux")
 	public Flux<String> ga4ghFlux()
 	{
-		return Flux.just("GA4GH",
-				" genbankaccn"," refseqaccn"," sequencelength")
-				.delayElements(Duration.ofSeconds(1))
-				.log();
+		return 
 		
 	}
-	
-	@GetMapping(value="/stream", produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<String> ga4ghFluxStream()
-	{
-		return Flux.just("GA4GH",
-				" genbankaccn"," refseqaccn"," sequencelength")
-				.delayElements(Duration.ofSeconds(1))
-				.log();
-		
-	}
-	
 	
 }
