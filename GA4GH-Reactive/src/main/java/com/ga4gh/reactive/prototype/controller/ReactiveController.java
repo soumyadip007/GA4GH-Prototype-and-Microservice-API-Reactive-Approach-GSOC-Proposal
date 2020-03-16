@@ -47,15 +47,4 @@ public class ReactiveController {
 		return this.GA4GHRepository.findById(id);
 	}
 	
-	@GetMapping("/inter")
-	public Flux<GA4GH> ga4ghInterval()
-	{
-		System.out.println("ga4gh");
-		System.out.println("ga4gh");
-		System.out.println("ga4gh");
-		System.out.println("ga4gh");
-		System.out.println("ga4gh");
-		System.out.println("ga4gh");
-		  return GA4GHRepository.findAll().delayElements(Duration.ofSeconds(3));
-	}
 }
