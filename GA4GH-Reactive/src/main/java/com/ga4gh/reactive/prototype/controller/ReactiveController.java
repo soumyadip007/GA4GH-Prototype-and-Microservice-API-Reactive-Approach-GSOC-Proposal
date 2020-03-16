@@ -56,6 +56,6 @@ public class ReactiveController {
 		System.out.println("ga4gh");
 		System.out.println("ga4gh");
 		System.out.println("ga4gh");
-		  return GA4GHRepository.findAll().delayElements(Duration.ofSeconds(1));
+		  return GA4GHRepository.findAll().delayElements(Duration.ofSeconds(3));
 	}
 }
