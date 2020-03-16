@@ -18,7 +18,7 @@ public class ReactiveConfig {
 	@Bean
 	RouterFunction<?> routerFunction(RouterHandler routehandler){
 		
-		return RouterFunctions.route(RequestPredicate.GET("/ga4gh/flux",
+		return RouterFunctions.route(GET("/ga4gh/flux",
 				routehandler::getAll));
 				
 		
