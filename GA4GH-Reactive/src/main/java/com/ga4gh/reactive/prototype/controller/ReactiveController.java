@@ -20,12 +20,25 @@ public class ReactiveController {
 	@GetMapping("/flux")
 	public Flux<GA4GH> ga4ghFlux()
 	{
+		
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
 		return this.GA4GHRepository.findAll();
 	}
 	
 	@GetMapping("/{id}")
 	public Mono<GA4GH> ga4ghID(@PathVariable final int i)
 	{
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
 		return this.GA4GHRepository.findById(i);
 	}
 	
