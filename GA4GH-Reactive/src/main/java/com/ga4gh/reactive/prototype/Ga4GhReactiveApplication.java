@@ -13,7 +13,7 @@ import com.ga4gh.reactive.prototype.repository.GA4GHRepository;
 @SpringBootApplication
 public class Ga4GhReactiveApplication {
 
-	
+/*	
 	@Bean
 	CommandLineRunner addChromo(GA4GHRepository ga4ghRepository){
 		return args -> {
@@ -32,7 +32,7 @@ public class Ga4GhReactiveApplication {
 			})
 			;
 		};	
-	}
+	}*/
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Ga4GhReactiveApplication.class, args);
