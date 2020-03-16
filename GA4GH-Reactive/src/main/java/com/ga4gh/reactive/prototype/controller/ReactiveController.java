@@ -1,5 +1,8 @@
 package com.ga4gh.reactive.prototype.controller;
 
+import java.time.Duration;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,10 +14,12 @@ import com.ga4gh.reactive.prototype.repository.GA4GHRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+
 @RestController
 @RequestMapping("/ga4gh")
 public class ReactiveController {
 
+	@Autowired
 	private GA4GHRepository GA4GHRepository;
 
 	@GetMapping("/flux")
@@ -31,7 +36,7 @@ public class ReactiveController {
 	}
 	
 	@GetMapping("/{id}")
-	public Mono<GA4GH> ga4ghID(@PathVariable final int i)
+	public Mono<GA4GH> ga4ghID(@PathVariable final int id)
 	{
 		System.out.println("ga4gh");
 		System.out.println("ga4gh");
@@ -39,7 +44,18 @@ public class ReactiveController {
 		System.out.println("ga4gh");
 		System.out.println("ga4gh");
 		System.out.println("ga4gh");
-		return this.GA4GHRepository.findById(i);
+		return this.GA4GHRepository.findById(id);
 	}
 	
+	@GetMapping("/inter")
+	public Flux<GA4GH> ga4ghInterval()
+	{
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		System.out.println("ga4gh");
+		  return GA4GHRepository.findAll().delayElements(Duration.ofSeconds(1));
+	}
 }
