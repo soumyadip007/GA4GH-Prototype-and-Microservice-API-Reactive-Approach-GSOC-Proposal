@@ -14,9 +14,10 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class ReactiveConfig {
 
 	@Bean
-	RouterFunction<?> routerFunction(Route){
+	RouterFunction<?> routerFunction(RouterHandler rhandler){
 		
-		RouterFunctions.route(RequestPredicate.GET("/ga4gh/flux")
+		RouterFunctions.route(RequestPredicate.GET("/ga4gh/flux",
+				rhandler.getAll()	)
 				
 				)
 		
