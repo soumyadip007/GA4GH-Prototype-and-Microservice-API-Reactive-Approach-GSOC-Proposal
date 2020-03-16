@@ -22,7 +22,7 @@ public class Ga4GhReactiveApplication {
 			.subscribe(null, null, () -> {
 
 				Stream.of(new GA4GH(1,"A","A","A","A" ),
-						new GA4GH(1,"B","B","B","B" ))
+						new GA4GH(2,"B","B","B","B" ))
 						.forEach(ga4gh -> {
 					ga4ghRepository
 						.save(ga4gh)
