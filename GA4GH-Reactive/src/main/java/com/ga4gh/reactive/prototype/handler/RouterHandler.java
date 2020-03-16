@@ -19,7 +19,8 @@ public class RouterHandler {
 	
 	public Mono<ServerResponse> getAll(ServerRequest serverRequest){
 			
-			return ServerResponse.ok()
+			return ServerResponse
+					.ok()
 					.body(GA4GHRepository.findAll(),GA4GH.class);
 					
 		}

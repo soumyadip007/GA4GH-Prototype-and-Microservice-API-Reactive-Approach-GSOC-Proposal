@@ -6,6 +6,8 @@ import org.springframework.web.reactive.function.server.RequestPredicate;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 
+import com.ga4gh.reactive.prototype.handler.RouterHandler;
+
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
@@ -14,12 +16,11 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class ReactiveConfig {
 
 	@Bean
-	RouterFunction<?> routerFunction(RouterHandler rhandler){
+	RouterFunction<?> routerFunction(RouterHandler routehandler){
 		
-		RouterFunctions.route(RequestPredicate.GET("/ga4gh/flux",
-				rhandler.getAll()	)
+		return RouterFunctions.route(RequestPredicate.GET("/ga4gh/flux",
+				routehandler::getAll));
 				
-				)
 		
 	}
 }
