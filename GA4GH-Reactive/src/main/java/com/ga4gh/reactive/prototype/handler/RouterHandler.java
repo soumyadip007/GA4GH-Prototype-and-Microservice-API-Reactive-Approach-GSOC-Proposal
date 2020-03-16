@@ -28,9 +28,11 @@ public class RouterHandler {
 		
 		String j=serverRequest.pathVariable("id");
 		
+		int i=Integer.parseInt(j);
+		
 		return ServerResponse
 				.ok()
-				.body(GA4GHRepository.findAll(),GA4GH.class);
+				.body(GA4GHRepository.findById(i),GA4GH.class);
 				
 	}
 
