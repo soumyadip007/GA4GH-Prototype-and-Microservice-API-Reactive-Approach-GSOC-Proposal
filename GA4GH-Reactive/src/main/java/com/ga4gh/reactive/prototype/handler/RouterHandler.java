@@ -1,7 +1,6 @@
 package com.ga4gh.reactive.prototype.handler;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -25,5 +24,14 @@ public class RouterHandler {
 					
 		}
 
+	public Mono<ServerResponse> get(ServerRequest serverRequest){
+		
+		String j=serverRequest.pathVariable("id");
+		
+		return ServerResponse
+				.ok()
+				.body(GA4GHRepository.findAll(),GA4GH.class);
+				
+	}
 
 }
