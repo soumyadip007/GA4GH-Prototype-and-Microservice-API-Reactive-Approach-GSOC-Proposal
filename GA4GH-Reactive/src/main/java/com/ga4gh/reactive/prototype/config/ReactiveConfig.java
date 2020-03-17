@@ -27,11 +27,11 @@ public class ReactiveConfig {
 	     return RouterFunctions
 	   .route(RequestPredicates.GET("/rest/ga4gh/all"), routehandler::getAll)
 	                .andRoute(RequestPredicates.GET("/rest/ga4gh/{id}"), routehandler::get)
-	                .andRoute(RequestPredicates.POST("/person"),
-	                	    request -> {
-	                	        Mono<GA4GH> OBJ= (Mono<GA4GH>) request.bodyToMono(GA4GH.class);
-	                	        return ResponseEntity.ok().build(GA4GHRepository.insert(OBJ));
-	                	      })
+//	                .andRoute(RequestPredicates.POST("/person"),
+//	                	    request -> {
+//	                	        Mono<GA4GH> OBJ= (Mono<GA4GH>) request.bodyToMono(GA4GH.class);
+//	                	        return ResponseEntity.ok().build(GA4GHRepository.insert(OBJ));
+//	                	      })
 	                ;
 	}
 
