@@ -35,5 +35,17 @@ public class RouterHandler {
 				.body(GA4GHRepository.findById(i),GA4GH.class);
 				
 	}
+	
+	public Mono<ServerResponse> save(ServerRequest serverRequest){
+		
+		String j=serverRequest.pathVariable("id");
+		
+		int i=Integer.parseInt(j);
+		
+		return ServerResponse
+				.ok()
+				.body(GA4GHRepository.findById(i),GA4GH.class);
+				
+	}
 
 }
