@@ -36,11 +36,6 @@ public class ReactiveConfig {
 	                ;
 		
 	}
-//	private BodyExtractor toMono(Class<GA4GH> class1) {
-//		// TODO Auto-generated method stub
-//		
-//		Class<GA4GH> obj=class1;
-//		return class1;
-//	}
+
 	
 }
